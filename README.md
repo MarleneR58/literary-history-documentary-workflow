@@ -1,61 +1,64 @@
-# Historical Documentary Video Workflow
+# Literary History Documentary Video Workflow
 
-Create a documentary that explains **the history of a subject and how it was built**, using a photorealistic presenter introduction followed by animated watercolor scenes.
+A customizable browser workflow for making short, historically grounded documentaries about novels, authors, art, ideas, institutions and events. It preserves the original VideoExpress and CloneVoice production process while adapting the story plan to each subject's documented history and creation or publication process.
+
+This personal version is forked from [ai-playbooks/historical-documentary-video-workflow](https://github.com/ai-playbooks/historical-documentary-video-workflow). The original repository remains unchanged.
+
+## What this workflow covers
+
+- Historical setting, creators and participants, motivation, context, changes over time, reception and significance.
+- The process that fits the subject: writing, editing, publication, performance, distribution, implementation or construction when construction is actually relevant.
+- A photorealistic presenter introduction followed by antique watercolor and ink documentary scenes.
+- A narration track, scene-by-scene coverage and timeline assembly in VideoExpress.
+
+For literary subjects, it separates the fictional story from the author's life and the work's publication history. It asks the producer to verify editions and dates, distinguish evidence from illustrative reconstruction, and treat controversy and later consequences with care.
 
 ## Requirements
 
-- A browser-capable agent that can follow the instructions in `SYSTEM_PROMPT.md`.
-- Access to [VideoExpress](https://app.videoexpress.ai/) and [CloneVoice](https://app.clonevoice.ai/), with generation access available.
-- Sign in when prompted. The workflow uses the agent's visible built-in browser unless you authorize another browser.
+- A browser-capable agent that can follow SYSTEM_PROMPT.md.
+- Access to [VideoExpress](https://app.videoexpress.ai/) and [CloneVoice](https://app.clonevoice.ai/) with generation access.
+- Sign in when prompted. The workflow is designed for the visible built-in browser.
 
-This folder contains instructions for browser automation. It is not a standalone executable or a direct API workflow.
+This repository contains browser automation instructions. It is not a standalone app or an API workflow.
 
-## How to use
+## Use it
 
-1. Load `SYSTEM_PROMPT.md` as the instructions for your browser automation agent, or ask the agent to read and follow that file.
-2. Start the workflow. It asks four questions together:
-
-   | Question | Default |
-   |---|---|
-   | Idea/Script | Supply a historical topic or your own script |
-   | Character | Daniel Reed, a fictional male presenter with a calm American English voice |
-   | Ratio | Landscape 16:9; Vertical 9:16 is also supported |
-   | Duration | 60 seconds total, up to 5 minutes |
-
+1. Load SYSTEM_PROMPT.md as the instructions for your browser automation agent, or ask the agent to read and follow the file.
+2. Start the workflow. It asks for:
+   - **Idea or script** — required; can be a topic, a story angle or a supplied script.
+   - **Presenter** — Daniel Reed by default; describe changes if wanted.
+   - **Ratio** — Landscape 16:9 by default; Vertical 9:16 is supported.
+   - **Duration** — 60 seconds by default, up to five minutes total, including a presenter intro of at least 20 seconds.
 3. Reply with your choices. For example:
 
-   ```text
-   Idea/Script: Explain the history of medieval London Bridge and how it was built.
-   Character: Keep the default.
-   Ratio: Landscape.
-   Duration: 120 seconds.
-   ```
+    Idea/Script: Explain how The Picture of Dorian Gray was commissioned, published in 1890, revised for the 1891 book edition, and received by Victorian reviewers. Put the scandal in context without claiming the novel alone caused Wilde's later downfall.
+    Presenter: Keep the default.
+    Ratio: Landscape.
+    Duration: 90 seconds.
 
-4. Let the agent complete generation and timeline assembly. It saves the project and clicks **Export Video**, then stops. It does not download the video.
+4. The agent researches the subject, drafts narration and scene prompts, generates the intro and documentary footage, assembles the timeline, saves the project, and opens the export flow. It stops after creating the export and does not download the video.
 
-## What it creates
+## Research and visual standards
 
-**Presenter intro — at least 20 seconds:** A character sheet establishes the presenter. The agent saves it to My AI Images, uses it as a consistent-character reference for a location scene, then generates speaking clips with the same voice description. The intro gives context and introduces the history and construction story.
+- Verify factual claims before adding them to narration or prompts. Prefer primary documents and authoritative library or museum records for publication details.
+- Do not invent conversations, locations, motives or exact production moments. Label representative staging as illustrative.
+- For books, show the manuscript, editing, printing, publication, readership and reviews only as the evidence supports. Keep scenes from a novel's fictional world distinct from real events.
+- Specify period clothing, tools, furnishings, editions and settings. Keep objects and people consistent across shots.
+- Documentary footage uses antique watercolor and ink unless you choose another style. The presenter intro stays photorealistic.
 
-**Historical documentary:** Ethan Sterling narration is created in CloneVoice. Watercolor-and-ink visuals illustrate who, when and why, followed by materials, tools, transport and building methods. Clothing, equipment and architecture follow the subject's period and location.
+The example topic in SYSTEM_PROMPT.md uses facts about the magazine publication and later book edition of Wilde's novel as a model. Recheck all details against scholarly or collection sources when adapting it. See the [British Library overview](https://www.britishlibrary.cn/en/works/picture-of-dorian-gray/) and the [Morgan Library catalog record](https://www.themorgan.org/printed-books/130859).
 
-**Active multi-shot clips:** Prompts use `Total duration` and timed `SHOT 1 / SHOT 2 / SHOT 3` sections, with hard cuts and distinct camera angles. Workers carry, pour, place, compact and build through connected actions. Asset IDs and internal labels stay out of generation text; subtitles and visible shot labels are not requested.
+## Audio and timing
 
-## Audio and video timing
+The requested duration guides the initial script. The completed narration is then reused unchanged; it is not regenerated or cut to force an exact runtime. It begins after the actual presenter intro. Documentary video is aligned to the full audio clip, and only excess video is trimmed. The final runtime may differ slightly from the initial estimate.
 
-The requested duration guides the initial script. Once narration is completed, it is reused unchanged: no repeated generation, audio cuts, silence trimming or speed changes to force a target runtime.
+Routine playback QA and unrequested sharing are omitted. Presenter speech stays audible, documentary clip audio is muted beneath narration, and the project is saved before export.
 
-The narration starts after the actual intro endpoint. Video coverage extends to the audio clip's right edge. To remove excess footage, the agent places the playhead at that edge, selects the last video clip, clicks **Cut**, and deletes only the excess right-hand video chunk. The final length therefore follows the completed audio plus intro and can differ slightly from the initial estimate.
+## Customize your workflow
 
-## Working preferences
-
-- No routine audio/video playback QA or unrequested Share actions.
-- Presenter speech stays audible; documentary clip audio is muted beneath the narration.
-- Reuse completed assets when resuming a production.
-- Edit instructions in place; do not create timestamped backup prompts or unnecessary reports.
-- Generated visuals and voice consistency can vary. Review the saved result before publishing.
+Edit SYSTEM_PROMPT.md in place to change the intake questions, presenter, style, narration voice, research standards, scene format, duration limits or export steps. Keep browser generation and asset handling instructions aligned with the controls visible in VideoExpress and CloneVoice. Use this fork for your changes; the upstream repository is not modified.
 
 ## Files
 
-- [SYSTEM_PROMPT.md](SYSTEM_PROMPT.md) — instructions the automation agent follows.
-- `README.md` — this short usage guide.
+- SYSTEM_PROMPT.md — production instructions for the agent.
+- README.md — this guide.
