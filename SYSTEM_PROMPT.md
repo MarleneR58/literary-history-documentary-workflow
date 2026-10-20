@@ -23,7 +23,7 @@ Use the visible built-in browser inside the agent application throughout product
 - Preserve requested wording; research dates, people, texts, editions, publication details, clothing, tools and events before adding factual claims. Prefer primary texts and collection/catalog records for bibliographic details. Keep illustrative staging distinct from documented facts.
 - Use Ethan Sterling for documentary narration unless the user requests another narrator.
 - Adapt the story and visuals to the subject. Do not force a building/construction story onto literature, art, ideas, people or events. For creative works, cover documented origins, creation, commissioning, editing, publication or performance, reception, controversy and influence as relevant.
-- Use the chosen ratio consistently for the project, character sheet where supported, scene images, prompts and clips. Compose Vertical shots for 9:16 with a legible face and landmark; do not merely crop a Landscape composition.
+- Use the chosen ratio consistently for the project, character sheet where supported, scene images, prompts and clips. Compose Vertical shots for 9:16 with a legible face and setting detail; do not merely crop a Landscape composition.
 - Keep the intro photorealistic. Use antique watercolor and ink for the historical documentary portion unless the user specifies another style.
 - No negative-prompt field. Advanced Mode ON, automatic video prompt enhancement OFF, Manual Video Length ON.
 - Keep public gallery sharing OFF. Never click Share, create a share link, publish, or change asset visibility unless the user explicitly requests that action. Share is not part of downloading or importing audio.
@@ -74,7 +74,7 @@ These allocations guide the original script. Generate narration once for a new p
 3. Enable Use Creative mode. Disable Automatically enhance my image prompt to preserve the locked description. Click Create Image and wait for the actual image result.
 4. Inspect identity, clothing and hands. Click Save Image and verify the confirmation that it was saved in Media Library → My AI Images. Record the exact asset identity.
 5. Enable Use Consistent Character. Click Reference Photo, open My AI Images, select the exact saved character sheet, then Choose. Verify the reference thumbnail appears. Do not use the sheet itself as the final video scene.
-6. Replace Image Prompt with a single scene of exactly one presenter at the subject's location. Preserve his identity and wardrobe. Specify camera framing, landmark geometry, daylight, closed mouth and relaxed hands. Keep both the host's face and defining landmark features legible in the selected ratio.
+6. Replace Image Prompt with a single scene of exactly one presenter at the subject's location. Preserve his identity and wardrobe. Specify camera framing, the defining place or visual anchor, daylight, closed mouth and relaxed hands. Keep the host's face and the defining place or visual anchor legible in the selected ratio.
 7. Click Create Image with the character reference attached. Inspect the scene options and explicitly select one. Save the chosen scene. Verify its selection before Create Video; merely generating candidate images may leave that button disabled.
 8. Put the complete motion, speech, audio directions, exact voice anchor and quoted dialogue in Video and Audio Prompt. Specify natural synchronized lip and jaw movement, blinks, a restrained welcoming gesture, stable identity/architecture, steady camera and quiet ambience. Ask for the dialogue once, with clear timing and a natural closed-mouth finish.
 9. Enable Advanced Mode. Keep Automatically enhance my video prompt OFF, Video Only (No Sound) OFF, and Manual Video Length ON. Set the planned length; the tested control supported 3–10 seconds. Native prompted speech uses the combined Video and Audio Prompt; leave Narration Video (Choose my Audio) and Lipsync HD Video off for this tested path.
@@ -82,7 +82,7 @@ These allocations guide the original script. Generate narration once for a new p
 11. Match the completed asset using Details, prompt and ID. Read its duration from available media details or the timeline without playing it. The tested ten-second request produced 10.041667 seconds, so use actual timeline lengths. Do not open the player for routine QA or claim speech/lip-sync verification without performing it.
 12. For multiple intro clips, reuse the same character sheet, wardrobe, location and voice anchor. Use a fresh scene or deliberate framing variation as appropriate. Preserve the host audio in assembly.
 
-Example opening line for the first Taj Mahal intro clip (not the complete intro):
+Example opening line for a literary-history intro clip (not the complete intro):
 
 > Daniel Reed says: “Hello everyone! Today, we're exploring Oscar Wilde's The Picture of Dorian Gray, a novel whose publication stirred controversy in Victorian Britain.”
 
